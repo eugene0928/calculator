@@ -17,71 +17,110 @@ class MainWindow(QMainWindow):
 
         self.mainBox = QVBoxLayout()
         self.mainBox.setAlignment(Qt.AlignTop)
-        self.setFixedSize(QSize(300, 200))
+        self.setFixedSize(QSize(290, 200))
 
-        #Box1
+        # Background color
+        self.setStyleSheet("background-color: #1C1C1C")
+
+        # Box1
         self.Box1 = QHBoxLayout()
         self.input = QLineEdit()
+        self.input.setStyleSheet("background-color: white")
         self.Box1.addWidget(self.input)
 
-        #Box2
+        # Box2
         self.Box2 = QHBoxLayout()
         self.AC_button = QPushButton("AC")
+        self.AC_button.setStyleSheet("background-color: #D4D4D3")
+
         self.percent_button = QPushButton("%")
+        self.percent_button.setStyleSheet("background-color: #D4D4D3")
+
         self.divide_button = QPushButton("/")
+        self.divide_button.setStyleSheet("background-color: #D4D4D3")
+
         self.backspace_button = QPushButton("<--")
+        self.backspace_button.setStyleSheet("background-color: #FF9500")
 
         self.Box2.addWidget(self.AC_button)
         self.Box2.addWidget(self.percent_button)
         self.Box2.addWidget(self.divide_button)
         self.Box2.addWidget(self.backspace_button)
 
-        #Box3
+        # Box3
 
         self.Box3 = QHBoxLayout()
         self._7_button = QPushButton("7")
+        self._7_button.setStyleSheet("background-color: #505050")
+
         self._8_button = QPushButton("8")
+        self._8_button.setStyleSheet("background-color: #505050")
+
         self._9_button = QPushButton("9")
+        self._9_button.setStyleSheet("background-color: #505050")
+
         self._x_button = QPushButton("*")
+        self._x_button.setStyleSheet("background-color: #FF9500")
 
         self.Box3.addWidget(self._7_button)
         self.Box3.addWidget(self._8_button)
         self.Box3.addWidget(self._9_button)
         self.Box3.addWidget(self._x_button)
 
-        #Box4
+        # Box4
 
         self.Box4 = QHBoxLayout()
         self._4_button = QPushButton("4")
+        self._4_button.setStyleSheet("background-color: #505050")
+
         self._5_button = QPushButton("5")
+        self._5_button.setStyleSheet("background-color: #505050")
+
         self._6_button = QPushButton("6")
+        self._6_button.setStyleSheet("background-color: #505050")
+
         self.minus_button = QPushButton("-")
+        self.minus_button.setStyleSheet("background-color: #FF9500")
 
         self.Box4.addWidget(self._4_button)
         self.Box4.addWidget(self._5_button)
         self.Box4.addWidget(self._6_button)
         self.Box4.addWidget(self.minus_button)
 
-        #Box5
+        # Box5
 
         self.Box5 = QHBoxLayout()
         self._1_button = QPushButton("1")
+        self._1_button.setStyleSheet("background-color: #505050")
+
         self._2_button = QPushButton("2")
+        self._2_button.setStyleSheet("background-color: #505050")
+
         self._3_button = QPushButton("3")
+        self._3_button.setStyleSheet("background-color: #505050")
+
         self.plus_button = QPushButton("+")
+        self.plus_button.setStyleSheet("background-color: #FF9500")
 
         self.Box5.addWidget(self._1_button)
         self.Box5.addWidget(self._2_button)
         self.Box5.addWidget(self._3_button)
         self.Box5.addWidget(self.plus_button)
 
-        #Box6
+        # Box6
 
         self.Box6 = QHBoxLayout()
         self.zero_button = QPushButton("0")
+        self.zero_button.setStyleSheet("background-color: #505050")
+
         self.dot_button = QPushButton(".")
+        self.dot_button.setStyleSheet("background-color: #505050")
+
         self.exit_button = QPushButton("exit")
+        self.exit_button.setStyleSheet("background-color: #505050")
+
         self.equal_button = QPushButton("=")
+        self.equal_button.setStyleSheet("background-color: #FF9500")
 
         self.Box6.addWidget(self.zero_button)
         self.Box6.addWidget(self.dot_button)
@@ -125,7 +164,7 @@ class MainWindow(QMainWindow):
 
         self.backspace_button.clicked.connect(self.backspace)
 
-    #slots
+    # slots
 
     def number_clicked(self, num: str) -> None:
         if not self.operation:
