@@ -3,7 +3,7 @@ import sys
 
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QLineEdit, QVBoxLayout, QWidget, QHBoxLayout, QPushButton
 
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import Qt, QSize
 
 
 class MainWindow(QMainWindow):
@@ -17,6 +17,7 @@ class MainWindow(QMainWindow):
 
         self.mainBox = QVBoxLayout()
         self.mainBox.setAlignment(Qt.AlignTop)
+        self.setFixedSize(QSize(300, 200))
 
         #Box1
         self.Box1 = QHBoxLayout()
