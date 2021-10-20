@@ -31,7 +31,7 @@ class MainWindow(QMainWindow):
         # Box2
         self.Box2 = QHBoxLayout()
         self.AC_button = QPushButton("AC")
-        self.AC_button.setStyleSheet("background-color: #D4D4D3")
+        self.AC_button.setStyleSheet("background-color: #D4D4D2")
 
         self.percent_button = QPushButton("%")
         self.percent_button.setStyleSheet("background-color: #D4D4D3")
@@ -39,7 +39,7 @@ class MainWindow(QMainWindow):
         self.divide_button = QPushButton("/")
         self.divide_button.setStyleSheet("background-color: #D4D4D3")
 
-        self.backspace_button = QPushButton("<--")
+        self.backspace_button = QPushButton("\u232b")
         self.backspace_button.setStyleSheet("background-color: #FF9500")
 
         self.Box2.addWidget(self.AC_button)
@@ -59,7 +59,7 @@ class MainWindow(QMainWindow):
         self._9_button = QPushButton("9")
         self._9_button.setStyleSheet("background-color: #505050")
 
-        self._x_button = QPushButton("*")
+        self._x_button = QPushButton("x")
         self._x_button.setStyleSheet("background-color: #FF9500")
 
         self.Box3.addWidget(self._7_button)
